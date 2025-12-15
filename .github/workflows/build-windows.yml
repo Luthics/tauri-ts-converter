@@ -20,8 +20,6 @@ jobs:
             args: '--target x86_64-apple-darwin'
           - platform: 'ubuntu-22.04'
             args: ''
-          - platform: 'ubuntu-22.04-arm' # Only available in public repos.
-            args: ''
           - platform: 'windows-latest'
             args: ''
 
@@ -39,7 +37,7 @@ jobs:
         uses: pnpm/action-setup@v4
         with:
             version: 9
-            
+
       - name: setup node
         uses: actions/setup-node@v4
         with:
