@@ -57,7 +57,7 @@ function isValidTimestamp(content: string): boolean {
 
 // 格式化时间戳
 function formatTimestamp(content: string): { timestamp: string; utcTime: string; localTime: string } | null {
-  const trimmed = content.trim();
+  const trimmed = content.trim().replace(/\./g, '');
   const length = trimmed.length;
   let timestamp: number;
   let hasMs = false;
