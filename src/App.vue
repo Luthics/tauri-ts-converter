@@ -16,8 +16,8 @@ const timestampInfo = ref<{
 
 // 检测是否为有效时间戳
 function isValidTimestamp(content: string): boolean {
-  // 去除空白字符
-  const trimmed = content.trim();
+  // 去除空白字符和小数点
+  const trimmed = content.trim().replace(/\./g, '');
   
   // 检查是否为纯数字
   if (!/^\d+$/.test(trimmed)) {
